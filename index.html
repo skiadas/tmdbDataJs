@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Data</title>
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body style="display: flex; flex-direction: row;">
+  <section id="genres" style="width: 50%;">
+    <label>Genre count: <span id="genreCount">unknown</span></label>
+    <h2>Click a genre</h2>
+    <ul id="genresList"></ul>
+  </section>
+  <section id="genreDetails" style="width: 50%;">
+    <h2>Genre heading</h2>
+    <label>Movies in Genre: <span id="movieCount">unknown</span></label>
+    <br />
+    <label>Average popularity: <span id="avgPopularity">unknown</span></label>
+    <br />
+    <label>Popularity cutoff: <input type="number" id="popularityCutoff" value="100"></label>
+    <ul id="movieList"></ul>
+  </section>
+<script type="module" src="./src/script.mts"></script>
+<script type="module" src="./src/pageUpdate.mts"></script>
+</body>
+</html>
