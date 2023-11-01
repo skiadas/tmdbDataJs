@@ -1,3 +1,5 @@
+import random from 'random';
+import domready from "domready";
 import {
   allGenreIds,
   genreIdsByName,
@@ -11,13 +13,8 @@ import {
 let popularityCutoff = 100;
 let currentGenre: string | null = null;
 
-if (document.readyState !== "loading") {
-  myInitCode();
-} else {
-  document.addEventListener("DOMContentLoaded", function () {
-    myInitCode();
-  });
-}
+console.log("Random number: ", random.int(0, 10));
+domready(myInitCode);
 
 function myInitCode() {
   const $genreCount = document.querySelector("#genreCount");
