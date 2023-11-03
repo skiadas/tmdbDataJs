@@ -6,13 +6,18 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test": "vitest",
+    "coverage": "vitest --coverage"
   },
   "devDependencies": {
     "@types/domready": "^1.0.1",
+    "@vitest/coverage-v8": "^0.34.6",
+    "@vitest/ui": "^0.34.6",
     "typescript": "^5.0.2",
+    "vite": "^4.4.5",
     "vite-plugin-webfont-dl": "^3.7.6",
-    "vite": "^4.4.5"
+    "vitest": "^0.34.6"
   },
   "dependencies": {
     "domready": "^1.0.8",

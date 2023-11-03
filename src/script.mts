@@ -1,3 +1,6 @@
+import genresJson from './genres.json';
+import moviesJson from './movies.json';
+
 export type GenreID = number;
 
 export interface Genre {
@@ -14,9 +17,8 @@ export interface Movie {
   readonly vote_count: number;
 }
 
-const genresJson: unknown = await fetch("./genres.json").then((r) => r.json());
 const allGenres: Genre[] = validateGenres(genresJson);
-const allMovies: Movie[] = (await fetch("./movies.json").then((r) => r.json())).movies;
+const allMovies: Movie[] = moviesJson.movies;
 
 export const allGenreIds = allGenres.map((x) => x.id);
 export const genreNamesById = new Map<GenreID, string>();
